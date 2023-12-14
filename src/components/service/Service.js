@@ -38,7 +38,7 @@ export default function Service() {
             <div id='listBox' className='mt-10 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3'>
                 {
                     boxs.map((item, index) => (
-                        <div className='shadow-gray-900 p-5'>
+                        <div key={index} className='shadow-gray-900 p-5'>
                             <p className='text-5xl text-secondary-color'>{item.icon}</p>
                             <p className='text-2xl text-gray-300 mt-4 font-semibold'>{item.name}</p>
                             <p className='text-md text-gray-300 mt-3'>{item.description}</p>

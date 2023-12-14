@@ -38,7 +38,7 @@ export default function AboutMe() {
                     <p className='text-xl text-secondary-color font-medium'>About me</p>
                     <p className='text-3xl font-bold uppercase'>Developer + UX/UI designer</p>
                     <p className='text-sm border-l-[5px] pl-3 my-5 border-secondary-color'>
-                        I am Seng Seang Leng, and Welcome to my portfolio, where I embark on a thrilling journey into the world of full stack web development. With a solid foundation in both front-end and back-end technologies, I've honed my skills over the past two months to create dynamic and immersive digital experiences mostly in <strong className='text-secondary-color'>UX/UI design</strong>.
+                        I am Seng Seang Leng, and Welcome to my portfolio, where I embark on a thrilling journey into the world of full stack web development. With a solid foundation in both front-end and back-end technologies, I have honed my skills over the past two months to create dynamic and immersive digital experiences mostly in <strong className='text-secondary-color'>UX/UI design</strong>.
                     </p>
                     <Button onClick={() => {
                         router.push("https://drive.google.com/file/d/1mxVnRaze5OGfMNHiQhJFnwFRwcERd3xw/view?usp=drive_link")

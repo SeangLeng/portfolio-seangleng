@@ -33,13 +33,13 @@ export default function TraningProject() {
                     </p>
                 </div>
                 <p className='text-lg border-l-5 border-secondary-color pl-3 text-white mt-2'>
-                    I've actively participated in FullStack website projects, specializing in the implementation of contemporary UX/UI components, with a primary focus on frontend development.
+                    I have actively participated in FullStack website projects, specializing in the implementation of contemporary UX/UI components, with a primary focus on frontend development.
                 </p>
             </div>
             <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 mt-10'>
                 {
                     projects.map((item, index) => (
-                        <a target='_blank' href={item.link} className='hover:scale-105 transition-all'>
+                        <a key={index} target='_blank' href={item.link} className='hover:scale-105 transition-all'>
                             {item.thumbnail}
                         </a>
                     ))

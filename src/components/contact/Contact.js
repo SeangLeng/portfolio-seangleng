@@ -16,7 +16,7 @@ export default function Contact() {
                 <div>
                     <p className='uppercase text-secondary-color font-semibold text-sm'>Get in touch</p>
                     <p className='text-4xl font-bold'>Feel Free To Reach & <span className='text-secondary-color'>Contact !</span></p>
-                    <p className='text-description-color my-5 pl-4 border-l-5 border-secondary-color'>Feel free to reach out and connect with me. I'm passionate about creating intuitive and visually compelling user experiences. Let's collaborate to bring your design visions to life!</p>
+                    <p className='text-description-color my-5 pl-4 border-l-5 border-secondary-color'>Feel free to reach out and connect with me. I am passionate about creating intuitive and visually compelling user experiences. Let is collaborate to bring your design visions to life!</p>
                 </div>
 
                 <div className='grid gap-2'>
