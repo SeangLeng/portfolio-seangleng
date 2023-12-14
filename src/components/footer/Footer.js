@@ -8,7 +8,7 @@ import { PiInstagramLogoFill } from "react-icons/pi";
 export default function Footer() {
     const router = useRouter();
     return (
-        <div className='flex flex-wrap justify-between items-center'>
+        <div className='flex flex-wrap justify-between items-center pb-10'>
             <div className='flex gap-3 justify-start items-center text-4xl text-gray-400'>
                 <a href='' className='hover:scale-110 transition-all'><MdFacebook /></a>
                 <a href='' className='hover:scale-110 transition-all'><FaGithub /></a>
