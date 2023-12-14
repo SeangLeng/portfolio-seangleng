@@ -17,11 +17,78 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  background-color: rgb(19, 19, 19);
+  min-height: 100vh;
+}
+
+#leng_animation {
+  width: fit-content;
+  overflow-x: hidden;
+  animation: opacityLoop 3s infinite;
+}
+
+@keyframes opacityLoop {
+  25% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#intro {
+  overflow: hidden;
+  font-size: 1.25em;
+  /* 3s duration, 40 steps (adjust for desired speed) */
+}
+
+#aboutme {
+  transform: scaleX(-1);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(19, 19, 19);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e8a100;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.animated-border-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-border-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #f39c12, transparent);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.animated-border-button:hover:before {
+  width: 100%;
 }
