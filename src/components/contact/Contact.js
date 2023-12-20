@@ -1,13 +1,47 @@
 'use client'
 import { Button, Input, Textarea, user } from '@nextui-org/react'
 import { useRouter } from 'next/navigation'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { MdMarkEmailUnread } from 'react-icons/md'
 
 export default function Contact() {
 
     const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [number, setNumber] = useState('');
+    const [message, setMessage] = useState('');
+
+    async function handleContact() {
+
+        const data = {
+            username,
+            email,
+            number,
+            message
+        };
+    
+        try {
+            const response = await fetch('http://localhost:8080/api/v1/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            console.log(result);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+
     const router = useRouter();
 
     return (
@@ -29,20 +63,20 @@ export default function Contact() {
                 <Input value={username} onValueChange={setUsername} radius='none' variant='bordered' placeholder={'Username'} size='sm' classNames={{
                     inputWrapper: ['border-1 border-gray-500']
                 }} />
-                <div className='grid lg:grid-cols-2 gap-5 md:grid-cols-2 grid-cols-1'>
-                    <Input type='email' radius='none' variant='bordered' placeholder={'Email'} size='sm' classNames={{
+                <div  className='grid lg:grid-cols-2 gap-5 md:grid-cols-2 grid-cols-1'>
+                    <Input value={email} onValueChange={setEmail} type='email' radius='none' variant='bordered' placeholder={'Email'} size='sm' classNames={{
                         inputWrapper: ['border-1 border-gray-500']
                     }} />
-                    <Input type='number' radius='none' variant='bordered' placeholder={'Number'} size='sm' classNames={{
+                    <Input value={number} onValueChange={setNumber} type='number' radius='none' variant='bordered' placeholder={'Number'} size='sm' classNames={{
                         inputWrapper: ['border-1 border-gray-500']
                     }} />
                 </div>
-                <Textarea variant='bordered' radius='none' placeholder='Enter message...' classNames={{
+                <Textarea value={message} onValueChange={setMessage} variant='bordered' radius='none' placeholder='Enter message...' classNames={{
                     inputWrapper: ['border-1 border-gray-500']
                 }} />
                 <div className='grid grid-cols-2 gap-5'>
-                    <Button onClick={() => router.push('/')}  color='warning' variant='ghost' radius='none' >Cancel</Button>
-                    <Button color='warning' radius='none' >Send</Button>
+                    <Button onClick={() => router.push('/')} color='warning' variant='ghost' radius='none' >Cancel</Button>
+                    <Button onClick={handleContact} color='warning' radius='none' >Send</Button>
                 </div>
             </div>
         </div>
