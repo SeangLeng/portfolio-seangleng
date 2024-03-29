@@ -21,12 +21,7 @@ export const projects = [
         thumbnail: <Image className={ImageStyle} src={portistad} alt={'portistad'} />,
         name: 'portistad',
         link: 'https://portistad.istad.co/'
-    }, 
-    {
-        thumbnail: <Image className={ImageStyle} src={portistad} alt={'portistad'} />,
-        name: 'portistad',
-        link: 'https://portistad.istad.co/'
-    }
+    },
 ]
 
 export default function TraningProject() {
