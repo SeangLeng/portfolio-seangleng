@@ -4,19 +4,26 @@ import portistad from '@assets/CV-vs.-Resume-437x230.png'
 import kQuick from '@assets/kquicksight.png'
 import Image from 'next/image'
 
+export const ImageStyle = 'min-w-full rounded-xl min-h-full object-cover';
+
 export const projects = [
     {
-        thumbnail: <Image className='min-w-full rounded-xl min-h-full object-cover' src={portfolio} alt={'portfolio'} />,
+        thumbnail: <Image className={ImageStyle} src={portfolio} alt={'portfolio'} />,
         name: 'Modern portfolio',
         link: 'https://seng-seangleng.vercel.app/'
     },
     {
-        thumbnail: <Image className='min-w-full rounded-xl min-h-full object-cover' src={kQuick} alt={'K-quicksight'} />,
+        thumbnail: <Image className={ImageStyle} src={kQuick} alt={'K-quicksight'} />,
         name: "k - quicksight",
-        link: 'https://k-quicksight-4gmo.vercel.app/'
+        link: 'https://k-quicksight.istad.co'
     },
     {
-        thumbnail: <Image className='min-w-full rounded-xl min-h-full object-cover' src={portistad} alt={'portistad'} />,
+        thumbnail: <Image className={ImageStyle} src={portistad} alt={'portistad'} />,
+        name: 'portistad',
+        link: 'https://portistad.istad.co/'
+    }, 
+    {
+        thumbnail: <Image className={ImageStyle} src={portistad} alt={'portistad'} />,
         name: 'portistad',
         link: 'https://portistad.istad.co/'
     }
