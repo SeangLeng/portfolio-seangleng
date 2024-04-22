@@ -45,7 +45,7 @@ export default function Contact() {
     const router = useRouter();
 
     return (
-        <div className='shadow-md shadow-gray-900 my-5 gap-5 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1'>
+        <div className='md:p-0 p-5 shadow-md shadow-gray-900 my-5 gap-5 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1'>
             <div className='grid gap-5'>
                 <div>
                     <p className='uppercase text-secondary-color font-semibold text-sm'>Get in touch</p>
