@@ -44,8 +44,6 @@ body {
 
 #intro {
   overflow: hidden;
-  font-size: 1.25em;
-  /* 3s duration, 40 steps (adjust for desired speed) */
 }
 
 #aboutme {

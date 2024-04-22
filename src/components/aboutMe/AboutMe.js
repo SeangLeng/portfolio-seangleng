@@ -4,7 +4,6 @@ import aboutMe from '@assets/aboutme.png'
 import Image from 'next/image'
 import { Button, Slider } from '@nextui-org/react'
 import { useRouter } from 'next/navigation'
-
 export const skills = [
     {
         skill: 'UX/UI design',
@@ -15,7 +14,8 @@ export const skills = [
         level: 0.9
     },
     {
-        skill: 'NextJs - frontend development',
+        skill: 'NextJs + ReactJs',
+        description: 'JavaScript + typescript templates for frontend development',
         level: 0.85
     },
     {
@@ -25,8 +25,38 @@ export const skills = [
     {
         skill: 'GIT Source code',
         level: 0.9
+    },
+    {
+        skill: 'Vecel deploy',
+        level: 0.7
+    },
+    {
+        skill: 'Python',
+        level: 0.4,
+        description: 'Phython for data analysis.'
+    },
+    {
+        skill: 'SQL',
+        level: 0.5,
+        description: 'Database management.'
+    },
+    {
+        skill: 'Agile Methodologies',
+        level: 0.5,
+        description: 'Experienced in Agile methodologies for project management.'
+    },
+    {
+        skill: 'Scrum',
+        level: 0.5,
+        description: 'Proficient in Scrum for iterative project development.'
+    },
+    {
+        skill: 'Teamwork',
+        level: 0.9,
+        description: 'Experienced in collaborative environments, effective communication, and conflict resolution.'
     }
-]
+];
+
 
 export default function AboutMe() {
     const router = useRouter();
@@ -50,7 +80,12 @@ export default function AboutMe() {
                     skills.map((item, index) => (
                         <div className='w-full min-h-[100px]' key={index}>
                             <div className='grid gap-5'>
-                                <p className='text-xl'>{item.skill}</p>
+                                <div>
+                                    <p className='text-xl'>{item.skill}</p>
+                                    {
+                                        item.description && <p className='text-gray-200 text-sm'>{item.description}</p>
+                                    }
+                                </div>
                                 <Slider
                                     showTooltip={true}
                                     size="md"

@@ -20,7 +20,7 @@ export default function Contact() {
             number,
             message
         };
-    
+
         try {
             const response = await fetch('http://localhost:8080/api/v1/contact', {
                 method: 'POST',
@@ -45,7 +45,7 @@ export default function Contact() {
     const router = useRouter();
 
     return (
-        <div className='shadow-md shadow-gray-900 my-5 p-10 gap-5 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1'>
+        <div className='shadow-md shadow-gray-900 my-5 gap-5 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1'>
             <div className='grid gap-5'>
                 <div>
                     <p className='uppercase text-secondary-color font-semibold text-sm'>Get in touch</p>
@@ -63,7 +63,7 @@ export default function Contact() {
                 <Input value={username} onValueChange={setUsername} radius='none' variant='bordered' placeholder={'Username'} size='sm' classNames={{
                     inputWrapper: ['border-1 border-gray-500']
                 }} />
-                <div  className='grid lg:grid-cols-2 gap-5 md:grid-cols-2 grid-cols-1'>
+                <div className='grid lg:grid-cols-2 gap-5 md:grid-cols-2 grid-cols-1'>
                     <Input value={email} onValueChange={setEmail} type='email' radius='none' variant='bordered' placeholder={'Email'} size='sm' classNames={{
                         inputWrapper: ['border-1 border-gray-500']
                     }} />

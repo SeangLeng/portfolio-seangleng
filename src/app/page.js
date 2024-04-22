@@ -19,11 +19,10 @@ export default function Home() {
     const intervalId = setInterval(() => {
       setDisplayText(text.substring(0, index));
       index++;
-
       if (index > text.length) {
         clearInterval(intervalId);
       }
-    }, 10); // Adjust the interval for typing speed
+    }, 10);
   }, []);
 
   return (
@@ -33,9 +32,9 @@ export default function Home() {
           <div className='transition-all'>
             <p className='w-full text-5xl uppercase font-bold mb-2 text-secondary-color'>seng seang<span className='text-white' id='leng_animation'>leng</span></p>
             <p className='text-3xl mt-3 mb-5 font-medium'>Frontend - UX/UI design</p>
-            <p id='intro' className='text-lg'>{displayText}</p>
+            <p id='intro' className='md:text-lg text-base'>{displayText}</p>
           </div>
-          <Image src={profile} alt='profile image' />
+          <Image src={profile} alt='profile image' className='hidden md:block' />
         </section>
         <AboutMe />
         <Service />
