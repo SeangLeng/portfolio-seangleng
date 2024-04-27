@@ -30,23 +30,33 @@ export default function Contact() {
                         title: 'Message has been sent successfully',
                         content: 'Thank you for your intesting message, you will get a response message as soon as possible.',
                         okText: 'Got it',
-                        centered: true
+                        centered: true,
+                        style: {
+                            color: 'black', 
+                        }
                     });
                 }).catch((error) => {
-                    console.log(error);
                     Modal.error({
                         title: 'Sorry, your email has not been send successfully',
                         content: 'please check your information and make sure that all feild as filled.' + error,
                         okText: 'Got it',
-                        centered: true
+                        centered: true,
+                        style: {
+                            color: 'black',
+                        }
                     });
                 });
         } else {
             Modal.error({
                 title: 'Sorry, your email has not been send successfully',
-                content: 'please check your information and make sure that all feild as filled.',
+                content: 'please check your information and make sure that all fields are filled.',
                 okText: 'Got it',
-                centered: true
+                centered: true,
+                okButtonProps: {
+                    style: {
+                        color: 'black',
+                    }
+                }
             });
         }
         setloading(false);
