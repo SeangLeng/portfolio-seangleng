@@ -31,8 +31,10 @@ export default function Contact() {
                         content: 'Thank you for your intesting message, you will get a response message as soon as possible.',
                         okText: 'Got it',
                         centered: true,
-                        style: {
-                            color: 'black', 
+                        okButtonProps: {
+                            style: {
+                                color: 'black',
+                            }
                         }
                     });
                 }).catch((error) => {
@@ -41,8 +43,10 @@ export default function Contact() {
                         content: 'please check your information and make sure that all feild as filled.' + error,
                         okText: 'Got it',
                         centered: true,
-                        style: {
-                            color: 'black',
+                        okButtonProps: {
+                            style: {
+                                color: 'black',
+                            }
                         }
                     });
                 });
