@@ -6,10 +6,11 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { MdMarkEmailUnread } from 'react-icons/md';
 import emailjs from '@emailjs/browser';
 import { Modal } from 'antd';
+import { TypingText } from '@/constants/TypingText';
 
 export default function Contact() {
 
-    const [username, setUsername] = useState('');
+    const [username, setUsername] = useState('Your name');
     const [email, setEmail] = useState('');
     const [number, setNumber] = useState('');
     const [message, setMessage] = useState('');
@@ -69,12 +70,12 @@ export default function Contact() {
     const router = useRouter();
 
     return (
-        <div className='md:p-0 p-5 shadow-md shadow-gray-900 my-5 gap-5 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1'>
+        <div className='py-5 shadow-md shadow-gray-900 my-5 gap-5 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1'>
             <div className='grid gap-5'>
                 <div>
                     <p className='uppercase text-secondary-color font-semibold text-sm'>Get in touch</p>
                     <p className='text-4xl font-bold'>Feel Free To Reach & <span className='text-secondary-color'>Contact !</span></p>
-                    <p className='text-description-color my-5 pl-4 border-l-5 border-secondary-color'>Feel free to reach out and connect with me. I am passionate about creating intuitive and visually compelling user experiences. Let is collaborate to bring your design visions to life!</p>
+                    <div className='text-description-color my-5 pl-4 border-l-5 border-secondary-color'> <TypingText text={'Feel free to reach out and connect with me. I am passionate about creating intuitive and visually compelling user experiences. Let is collaborate to bring your design visions to life!'} /></div>
                 </div>
 
                 <div className='grid gap-2'>

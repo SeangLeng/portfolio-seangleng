@@ -27,7 +27,7 @@ export const projects = [
 export default function TraningProject() {
     return (
         <div className='py-10'>
-            <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1'>
+            <div className='grid md:grid-cols-2 grid-cols-1'>
                 <div>
                     <p className='font-medium'>What i have <span className='text-secondary-color'>done?</span></p>
                     <p className='text-4xl font-semibold'>
@@ -38,7 +38,7 @@ export default function TraningProject() {
                     I have actively participated in FullStack website projects, specializing in the implementation of contemporary UX/UI components, with a primary focus on frontend development.
                 </p>
             </div>
-            <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 mt-10'>
+            <div className='grid md:grid-cols-2 grid-cols-1 gap-5 mt-10'>
                 {
                     projects.map((item, index) => (
                         <a key={index} target='_blank' href={item.link} className='hover:scale-105 transition-all'>

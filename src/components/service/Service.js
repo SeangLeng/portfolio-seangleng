@@ -29,12 +29,12 @@ export const boxs = [
 
 export default function Service() {
     return (
-        <section className='my-5'>
+        <section className='my-5 w-full'>
             <p className='text-md font-semibold text-secondary-color'>What i provide ?</p>
             <p className='text-4xl font-semibold text-white w-1/2'>
                 I Offer Wide Range Of Top Notch <span className='text-secondary-color' id='leng_animation'>Services</span>
             </p>
-            <div id='listBox' className='mt-10 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5'>
+            <div id='listBox' className='w-full mt-10 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5'>
                 {
                     boxs.map((item, index) => (
                         <div key={index} className='p-5 hover:scale-105 transition-all cursor-pointer rounded-2xl'>

@@ -4,6 +4,8 @@ import aboutMe from '@assets/aboutme.png'
 import Image from 'next/image'
 import { Button, Slider } from '@nextui-org/react'
 import { useRouter } from 'next/navigation'
+
+
 export const skills = [
     {
         skill: 'UX/UI design',
@@ -71,14 +73,14 @@ export default function AboutMe() {
                         I am Seng Seang Leng, and Welcome to my portfolio, where I embark on a thrilling journey into the world of full stack web development. With a solid foundation in both front-end and back-end technologies, I have honed my skills over the past two months to create dynamic and immersive digital experiences mostly in <strong className='text-secondary-color'>UX/UI design</strong>.
                     </p>
                     <Button onClick={() => {
-                        router.push("https://drive.google.com/file/d/1mxVnRaze5OGfMNHiQhJFnwFRwcERd3xw/view?usp=drive_link")
+                        window.open('/assets/ux-ui-designer-CV-sengseangleng.pdf', '_blank');
                     }} variant='ghost' color='warning' className='rounded-none animated-border-button' >Download CV</Button>
                 </div>
             </div>
-            <div className='grid my-10 justify-around w-full items-center lg:grid-cols-2 gap-3 md:grid-cols-2 grid-cols-1'>
+            <div className='grid my-10 justify-around w-full items-center lg:grid-cols-2 gap-10 md:grid-cols-2 grid-cols-1'>
                 {
                     skills.map((item, index) => (
-                        <div className='w-full min-h-[100px]' key={index}>
+                        <div className='w-full hover:shadow-lg hover:shadow-gray-700 transition-all rounded-xl p-5' key={index}>
                             <div className='grid gap-5'>
                                 <div>
                                     <p className='text-xl'>{item.skill}</p>
@@ -97,7 +99,6 @@ export default function AboutMe() {
                                     minValue={0}
                                     color='warning'
                                     defaultValue={item.level}
-                                    className="max-w-md"
                                 />
                             </div>
                         </div>

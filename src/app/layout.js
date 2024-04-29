@@ -18,12 +18,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={metadata.description} />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:type" content="portfolio" />
+      </head>
       <body className={inter.className}>
         <ProviderNextUI>
           <Navbar />
           <NavbarNextUI />
           {children}
-
+          <Footer />
         </ProviderNextUI>
       </body>
     </html>
